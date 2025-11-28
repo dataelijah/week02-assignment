@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* @media  */
+@media screen and (max-width: 1400px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 body {
   background: linear-gradient(rgb(148, 149, 147), rgb(128, 131, 130));
   font-family: "Klee One", cursive;
@@ -56,6 +60,7 @@ main {
   background: linear-gradient(rgb(196, 200, 184), rgb(3, 114, 97));
   padding: 0px;
   grid-auto-rows: 1fr;
+  overflow: hidden;
 }
 .text {
   padding: 20px;
@@ -122,6 +127,7 @@ main {
 /* CSS START INDIVIDUAL - PANEL RIGHT */
 .panel.right {
   grid-template-rows: 0.4fr 3fr;
+  overflow: hidden;
 }
 .panel.right video {
   min-width: 100%;
