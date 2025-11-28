@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* @media  */
+body {
+  background: linear-gradient(rgb(148, 149, 147), rgb(128, 131, 130));
+  font-family: "Klee One", cursive;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  min-height: 100%;
+  margin: 1ch;
+}
+.panel {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* panel-left */
+.panel.left {
+  background: linear-gradient(rgb(67, 69, 61), rgb(62, 81, 71));
+  padding: 40px;
+  grid-auto-rows: 1fr;
+}
+/* targeting the <a> links */
+.panel.left nav a {
+  text-decoration: none;
+  color: #a8a8a8;
+  display: inline;
+  align-items: row;
+  margin-right: 30px;
+}
+.panel.left h1 {
+  color: rgb(241, 106, 61);
+  font-style: bold;
+  text-shadow: -1px -0.5px, -1px 0.5px, -1px -0.5px, -1px 0.5px;
+  /* manual way I made a bold-text, can also add color e.g outlined -1px -0.5px black */
+}
+.panel.left p {
+  color: #a8a8a8;
+  max-width: 400px;
+  line-height: 1.6rem;
+  /* controls each line spacing */
+}
+.panel.left footer {
+  align-self: flex-end;
+}
+/* CSS END INDIVIDUAL - PANEL LEFT */
+/* CSS START INDIVIDUAL - PANEL MIDDLE */
+.panel.middle {
+  grid-template-rows: 3fr 1fr;
+  min-width: 100%;
+  min-height: 100%;
+  background: linear-gradient(rgb(196, 200, 184), rgb(3, 114, 97));
+  padding: 0px;
+  grid-auto-rows: 1fr;
+}
+.text {
+  padding: 20px;
+  margin-left: 50px;
+  min-width: 10px;
+  max-width: 370px;
+}
+.text h2 {
+  color: rgb(241, 106, 61);
+  font-style: bold;
+  text-shadow: -1px -0.5px, -1px 0.5px, -1px -0.5px, -1px 0.5px;
+  /* manual way I made a bold-text, can also add color e.g outlined -1px -0.5px black */
+}
+.panel.middle p {
+  color: #070707;
+  max-width: 400px;
+  line-height: 1.6rem;
+  /* controls each line spacing */
+}
+
+.fruit-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 100%;
+  margin: auto;
+  box-shadow: 0 8px 16px 0 rgb(2, 60, 9);
+  border-radius: 5px;
+}
+
+.thumb {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 0px;
+  margin-left: 50px;
+}
+.thumb .box {
+  margin-inline-end: 40%;
+}
+.thumb img {
+  width: 40px;
+  height: 100%;
+  border: 1px solid rgb(2, 60, 9);
+  padding: 5px;
+  border-radius: 12px;
+}
+.fruity-text {
+  text-align: center;
+
+  padding: 10px;
+  color: rgb(250, 101, 8);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box img:hover {
+  background-color: rgb(127, 129, 129);
+  cursor: pointer;
+}
+/* CSS END INDIVIDUAL - PANEL MIDDLE */
+/* CSS START INDIVIDUAL - PANEL RIGHT */
+.panel.right {
+  grid-template-rows: 0.4fr 3fr;
+}
+.panel.right video {
+  min-width: 100%;
+  min-height: 100%;
+}

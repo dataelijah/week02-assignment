@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js"></script>
+    <title>Fruity Change</title>
+  </head>
+  <body>
+    <main>
+      <div class="panel left">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div>
+          <h1>Sooo Fruity</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quia
+            illum ad, similique reprehenderit nobis ipsam? At facilis fugit quos
+            praesentium nobis eveniet tenetur illo unde. Consectetur facilis
+            minima ipsa?
+          </p>
+        </div>
+        <footer>
+          <p>
+            Lorem &copy; 2025 elit. Delectus iste eum eos quos nisi aspernatur,
+            repellat,
+          </p>
+        </footer>
+      </div>
+      <!-- MIDDLE START -->
+      <div class="panel middle">
+        <!-- start of fruit image switch  -->
+        <div class="fruit-parent">
+          <div class="fruity-text">
+            <h3>Fruity Seeds</h3>
+          </div>
+          <div class="main-Img" onclick="changeBGcolor(byThis)">
+            <img
+              src="./images/fruit_1.jpg"
+              alt="pomegranate seed"
+              class="big-img"
+              width="100%"
+            />
+          </div>
+          <div class="thumb">
+            <div class="box" onclick="openImg(this)">
+              <img src="./images/fruit_1.jpg" alt="pomegranate" />
+            </div>
+            <div class="box" onclick="openImg(this)">
+              <img src="./images/fruit_2.jpg" alt="kiwi" />
+            </div>
+            <div class="box" onclick="openImg(this)">
+              <img src="./images/fruit_3.jpg" alt="avacado" />
+            </div>
+            <div class="box" onclick="openImg(this)">
+              <img src="./images/fruit_4.jpg" alt="strawberry" />
+            </div>
+          </div>
+        </div>
+        <!-- end of fruit image switch -->
+        <div class="text">
+          <h2>Big middle Text</h2>
+          <p>
+            Lorem laboriosam earum inventore autem. Voluptatem porro numquam
+            quae ducimus natus!
+          </p>
+        </div>
+      </div>
+      <!-- MIDDLE END -->
+      <div class="panel right">
+        <div class="text">
+          <h2>Big right Text</h2>
+          <p>
+            Lorem tae quae, tempore laudantium cupiditate dolorum? Aperiam natus
+            numquam accusamus deleniti, sit laborum itaque iure!
+          </p>
+        </div>
+        <video src="./video/harvest-video.mp4" >
+      </div>
+    </main>
+  </body>
+</html>
