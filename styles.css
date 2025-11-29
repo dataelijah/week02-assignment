@@ -3,11 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-@media screen and (max-width: 1400px) {
+
+@media screen and (max-width: 1232px) {
   main {
-    grid-template-columns: 1fr 1fr;
+    color: rgb(56, 63, 65);
+    grid-template-columns: 0.5fr 0.5 2fr;
+    grid-template-rows: 1fr;
+  }
+  .panel {
+    grid-column: span 3;
+    border-style: solid blue;
+    margin: 1.3ch;
+    border: solid;
+  }
+  .panel.middle {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
   }
 }
+
 body {
   background: linear-gradient(rgb(148, 149, 147), rgb(128, 131, 130));
   font-family: "Klee One", cursive;
@@ -27,6 +42,8 @@ main {
   background: linear-gradient(rgb(67, 69, 61), rgb(62, 81, 71));
   padding: 40px;
   grid-auto-rows: 1fr;
+  overflow: hidden;
+  /* auto-rows -means each item will take up one fraction of total height available */
 }
 /* targeting the <a> links */
 .panel.left nav a {
@@ -58,6 +75,7 @@ main {
   min-width: 100%;
   min-height: 100%;
   background: linear-gradient(rgb(196, 200, 184), rgb(3, 114, 97));
+
   padding: 0px;
   grid-auto-rows: 1fr;
   overflow: hidden;
@@ -132,4 +150,8 @@ main {
 .panel.right video {
   min-width: 100%;
   min-height: 100%;
+}
+
+.transformvideo {
+  transform: rotate(90deg);
 }
