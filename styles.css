@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 751px) {
   main {
-    min-width: 547px;
+    /* min-width: 547px; */
     background-color: rgb(46, 42, 42);
     min-width: 535px;
 
@@ -112,19 +112,21 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
+  grid-row: 1fr 1fr 1fr;
   min-height: 100%;
   margin: 1ch;
 }
 .panel {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
 }
 /* panel-left */
 .panel.left {
   background: linear-gradient(rgb(67, 69, 61), rgb(62, 81, 71));
   padding: 40px;
   grid-auto-rows: 1fr;
-  overflow: hidden;
+  overflow: visible;
   /* auto-rows -means each item will take up one fraction of total height available */
 }
 /* targeting the <a> links */
@@ -144,7 +146,7 @@ main {
 .panel.left p {
   color: #a8a8a8;
   max-width: 400px;
-  line-height: 1.6rem;
+  line-height: 3rem;
   /* controls each line spacing */
 }
 .panel.left footer {
@@ -164,6 +166,9 @@ main {
   grid-auto-rows: 1fr;
   overflow: hidden;
 }
+.panel.middle .text p {
+  line-height: 3rem;
+}
 .text {
   padding: 20px;
   margin-left: 0px;
@@ -174,12 +179,14 @@ main {
   width: 100%;
   background-color: rgba(82, 79, 79, 0.055);
 }
+
 .text h2 {
   color: rgb(241, 106, 61);
   font-style: bold;
   text-shadow: -1px -0.5px, -1px 0.5px, -1px -0.5px, -1px 0.5px;
   /* manual way I made a bold-text, can also add color e.g outlined -1px -0.5px black */
 }
+
 .panel.middle p {
   color: #070707;
   max-width: 400px;
@@ -232,9 +239,61 @@ main {
 /* CSS END INDIVIDUAL - PANEL MIDDLE */
 /* CSS START INDIVIDUAL - PANEL RIGHT */
 .panel.right {
-  grid-template-rows: 0.4fr 3fr;
+  display: flex;
+  /* position: relative; */
+  flex-direction: row;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  border-color: white;
+  border-style: solid;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .panel.right .transformvideo {
-  min-width: 100%;
+  position: relative;
+  width: 100%;
+  filter: brightness(10%);
+  display: block;
+  height: auto;
+  z-index: 0;
 }
+
+.button-item {
+  position: absolute;
+  margin-top: 40%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  /* z index helped to put this button in front */
+}
+
+.buttonDeco {
+  cursor: pointer;
+  width: 20rem;
+  background-color: rgb(119, 203, 111);
+  color: rgb(255, 36, 204);
+  padding: 1ch;
+  border: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+/* 
+.panel.right { */
+/*Enabling flexbox on main container from <div>*/
+
+/* position: fixed; fixes in place */
+/* z-index: 1000; puts it above all other elements */
+/* width: 100%; */
+/* gap: 40px; */
+/* background-color: black; */
+
+/* border-width: 2px; */
+/* border-radius: 2.2ch; */
+
+/* align-items: center, helped stop the buttons deforming to the overall size */
+/* } */
