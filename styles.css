@@ -3,29 +3,105 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-@media screen and (max-width: 1232px) {
+@media screen and (max-width: 1025px) {
   main {
-    color: rgb(2, 58, 73);
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+  }
+}
+@media screen and (max-width: 895px) {
+  main {
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 1fr;
   }
   .panel {
     grid-column: span 3;
-    border-style: solid blue;
+
     margin: 1.3ch;
     border: solid;
   }
+  .panel.left {
+    align-items: center;
+    justify-items: center;
+  }
+  .panel.left p {
+    padding: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .panel.middle {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: end;
   }
-  .panel.right {
-    background-color: rgb(171, 171, 171);
-    display: block;
-    position: relative;
-    grid-template-rows: 0.4fr 3fr;
+
+  .fruit-parent .thumb {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1ch;
+
+    left: 82%;
+    bottom: 35%;
+  }
+
+  .fruit-parent .thumb img {
+    width: 60px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  main {
+    min-width: 547px;
+    background-color: rgb(46, 42, 42);
+    min-width: 535px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .panel {
+    grid-column: span 3;
+
+    margin: 1.3ch;
+    border: solid;
+  }
+
+  .panel.middle {
+    background: (rgb(164, 216, 32), rgb(249, 114, 51));
+  }
+
+  .panel.middle .fruit-parent {
+    background: linear-gradient(rgb(84, 40, 83), rgb(247, 84, 116));
+  }
+  .fruit-parent .thumb {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25ch;
+
+    left: 64%;
+    bottom: 75%;
+  }
+
+  .fruit-parent .thumb img {
+    width: 35px;
+    height: auto;
+  }
+
+  .fruit-parent .fruity-text {
+    color: rgb(241, 251, 133);
+    font-size: larger;
+  }
+  .panel.middle .text p {
+    color: rgb(255, 255, 255);
+  }
+  .text {
+    color: rgb(255, 255, 255);
+  }
+  .panel.right .transformvideo {
+    filter: brightness(83%);
   }
 }
 
@@ -90,9 +166,13 @@ main {
 }
 .text {
   padding: 20px;
-  margin-left: 50px;
+  margin-left: 0px;
   min-width: 10px;
-  max-width: 370px;
+  max-width: 450px;
+}
+.panel.right .text {
+  width: 100%;
+  background-color: rgba(82, 79, 79, 0.055);
 }
 .text h2 {
   color: rgb(241, 106, 61);
@@ -116,7 +196,7 @@ main {
   height: 100%;
   margin: auto;
   box-shadow: 0 8px 16px 0 rgb(2, 60, 9);
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .thumb {
@@ -134,6 +214,7 @@ main {
   height: 100%;
   border: 1px solid rgb(2, 60, 9);
   padding: 5px;
+  filter: opacity(78%);
   border-radius: 12px;
 }
 .fruity-text {

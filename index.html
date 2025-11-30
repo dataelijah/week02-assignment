@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap"
       rel="stylesheet"
     />
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <title>Fruity Change</title>
   </head>
   <body>
@@ -42,13 +42,25 @@
         <!-- start of fruit image switch  -->
         <div class="fruit-parent">
           <div class="fruity-text">
-            <h3>Fruity Seeds</h3>
+            <h3>Fruity seeds</h3>
           </div>
-          <div class="main-Img" onclick="changeBGcolor(byThis)">
+          <div class="main-Img" onclick="openImg(this)">
             <img
+            srcset="./images/fruit_1_Pomegranate_-_640x427.jpg	640w;
+./images/fruit_1_Pomegranate_-_1920x1280.jpg	1920w;
+./images/fruit_1_Pomegranate_-_2400x1600.jpg	2400w;
+
+./images/fruit_2_Kiwi_-_640x427.jpg	640w;
+./images/fruit_2_Kiwi_-_1920x1280.jpg	1920w;
+./images/fruit_2_Kiwi_-_2400x1600.jpg	2400w;
+
+./images/fruit_2_Kiwi_-_2400x1600.jpg	2400w;
+./images/fruit_3_Avacado_-_1920x1282.jpg	1920w;
+./images/fruit_3_Avacado_-_2400x1603.jpg	2400w;
+"
               src="./images/fruit_1.jpg"
               alt="pomegranate seed"
-              class="big-img"
+              id="bigImg"
               width="100%"
             />
           </div>
@@ -69,7 +81,7 @@
         </div>
         <!-- end of fruit image switch -->
         <div class="text">
-          <h2>Big middle Text</h2>
+          <h2>BIG end Text</h2>
           <p>
             Lorem laboriosam earum inventore autem. Voluptatem porro numquam
             quae ducimus natus!
@@ -79,13 +91,13 @@
       <!-- MIDDLE END -->
       <div class="panel right">
         <div class="text">
-          <h2>Big RIGHT Text</h2>
+          <h2>BIG right Text</h2>
           <p>
             Lorem tae quae, tempore laudantium cupiditate dolorum? Aperiam natus
             numquam accusamus deleniti, sit laborum itaque iure!
           </p>
         </div>
-        <video class="transformvideo" src="./video/harvest-video.mp4" >
+        <video class="transformvideo" src="./video/harvest-video.mp4" autoplay >
       </div>
     </main>
   </body>
