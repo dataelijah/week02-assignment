@@ -256,7 +256,7 @@ main {
 .panel.right .transformvideo {
   position: relative;
   width: 100%;
-  filter: brightness(10%);
+  filter: brightness(70%);
   display: block;
   height: auto;
   z-index: 0;
